@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keuze</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- formulier -->
+    <form class="kaart" action="https://formsubmit.co/hoogstraate.noah@gmail.com" method="POST">
+
+        <!-- instellingen -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nieuw antwoord">
+        <input type="hidden" name="_next" value="https://noahhighstreet.github.io/Imsorryqueen/einde.html">
+        <input type="hidden" name="vraag1" value="Ja">
+		<input type="hidden" name="vraag2" value="Ja">
+
+        <!-- tekst -->
+        <h1 class="titel">Yess ik kijk er naar uit!</h1>
+		<h1 class="titel">Iets leuks in gedachte?</h1>
+
+        <!-- keuzes -->
+        <fieldset class="keuzes">
+            <label class="keuze">
+                <input type="radio" name="antwoord" value="In de stad een drankske pakken" required>
+                <span>In de stad een drankske pakken</span>
+            </label>
+            <label class="keuze">
+                <input type="radio" name="antwoord" value="Parkje wandelen">
+                <span>Parkje wandelen</span>
+            </label>
+            <label class="keuze">
+                <input type="radio" name="antwoord" value="In de avond een hapske pakken">
+                <span>In de avond een hapske pakken</span>
+            </label>
+            <label class="keuze">
+                <input type="radio" name="antwoord" value="De Noah special">
+                <span>De Noah special ;3 (Ik kan kiezen)</span>
+            </label>
+        </fieldset>
+
+        <!-- knop -->
+        <button type="submit" class="knop ja">Indienen</button>
+
+    </form>
+
+</body>
+</html>
