@@ -18,3 +18,32 @@ if (nee) {
     nee.addEventListener("touchstart", vlucht, { passive: false });
     nee.addEventListener("click", vlucht);
 }
+
+// formulier
+const formulier = document.getElementById("formulier");
+
+// versturen
+async function verstuur(e) {
+    e.preventDefault();
+    const knop = formulier.querySelector("button");
+    knop.disabled = true;
+    knop.textContent = "Bezig...";
+    try {
+        const reactie = await fetch(formulier.action, {
+            method: "POST",
+            body: new FormData(formulier),
+            headers: { Accept: "application/json" }
+        });
+        if (reactie.ok) {
+            window.location.href = "einde.html";
+            return;
+        }
+    } catch (fout) {}
+    knop.disabled = false;
+    knop.textContent = "Opnieuw proberen";
+}
+
+// events
+if (formulier) {
+    formulier.addEventListener("submit", verstuur);
+}
